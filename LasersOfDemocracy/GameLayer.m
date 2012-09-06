@@ -89,9 +89,14 @@
     
     [self addChild:rock];
     CGSize windowSize = [[CCDirector sharedDirector] winSize];
-    CGPoint position = ccp(random() % (int)windowSize.width, random() % (int)windowSize.height);
-    rock.position = position;
+    
+    do {
+        CGPoint position = ccp(random() % (int)windowSize.width, random() % (int)windowSize.height);
+        rock.position = position;
+    } while (ccpDistance(player.position, rock.position) < 100);
+    
     [enemies addObject:rock];
+
     
     // ##8.1: Move around
     CGPoint velocity = ccp(random() % 200 - 100, random() % 200 - 100);
@@ -124,11 +129,9 @@
 // ##9.1: Update method
 -(void) update:(ccTime)deltaTime {
     
-    // Inset the collision box a bit to give the player some leeway
-    CGRect playerCollisionBox = CGRectInset(player.boundingBox, 10, 10);
     
     for (CCSprite* rock in enemies) {
-        if (CGRectIntersectsRect(rock.boundingBox, playerCollisionBox)) {
+        if (ccpDistance(player.position, rock.position) < 30) {
             NSLog(@"!!!! PLAYER HIT!");
             [player removeFromParentAndCleanup:YES];
             player = nil;
