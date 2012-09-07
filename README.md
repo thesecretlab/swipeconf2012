@@ -6,7 +6,7 @@ You can see the slides for the presentation at https://speakerdeck.com/u/thesecr
 
 ## License
 
-SLTutorialController is licensed under the MIT license.
+SwipeCocos2DDemo is licensed under the MIT license.
 
 Copyright (c) 2012 Secret Lab, Pty. Ltd.
 
