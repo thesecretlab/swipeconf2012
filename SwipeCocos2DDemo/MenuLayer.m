@@ -1,16 +1,16 @@
 //
 //  MenuLayer.m
-//  LasersOfDemocracy
+//  SwipeCocos2DDemo
 //
 //  Created by Jon Manning on 30/08/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 Secret Lab. All rights reserved.
 //
 
 #import "MenuLayer.h"
 #import "GameLayer.h"
 
-// ##10.2 Add label ivar
 @interface MenuLayer () {
+    // "Spaceships" label
     CCLabelTTF* label;
 }
 
@@ -18,7 +18,7 @@
 
 @implementation MenuLayer
 
-// ##10.3 Add scene, init and onEnter methods
+// Returns a CCScene containing this layer.
 +(CCScene *) scene
 {
 	CCScene *scene = [CCScene node];
@@ -27,6 +27,7 @@
 	return scene;
 }
 
+// Create and set up the "Spaceships" label.
 - (id)init
 {
     self = [super init];
@@ -38,6 +39,8 @@
     return self;
 }
 
+// When the scene is ready to show, position the label
+// in the middle of the screen.
 - (void)onEnter {
     [super onEnter];
     CGSize size = [[CCDirector sharedDirector] winSize];

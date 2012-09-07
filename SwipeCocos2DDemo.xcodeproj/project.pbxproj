@@ -131,8 +131,6 @@
 		68A50BDE15EEF5650003B568 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 68A50BDD15EEF5650003B568 /* vec4.c */; };
 		68A50BE315EEF5650003B568 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A50BE215EEF5650003B568 /* main.m */; };
 		68A50BE615EEF5650003B568 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A50BE515EEF5650003B568 /* AppDelegate.m */; };
-		68A50BE915EEF5650003B568 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A50BE815EEF5650003B568 /* HelloWorldLayer.m */; };
-		68A50BEC15EEF5650003B568 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A50BEB15EEF5650003B568 /* IntroLayer.m */; };
 		68A50BF415EF1B760003B568 /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A50BF315EF1B760003B568 /* GameLayer.m */; };
 		68A50BFD15EF20620003B568 /* Art.psd in Resources */ = {isa = PBXBuildFile; fileRef = 68A50BF615EF20620003B568 /* Art.psd */; };
 		68A50BFE15EF20620003B568 /* Player-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 68A50BF715EF20620003B568 /* Player-hd.png */; };
@@ -403,12 +401,8 @@
 		68A50BE215EEF5650003B568 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68A50BE415EEF5650003B568 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68A50BE515EEF5650003B568 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		68A50BE715EEF5650003B568 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		68A50BE815EEF5650003B568 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		68A50BEA15EEF5650003B568 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		68A50BEB15EEF5650003B568 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		68A50BF215EF1B760003B568 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = LasersOfDemocracy/GameLayer.h; sourceTree = "<group>"; };
-		68A50BF315EF1B760003B568 /* GameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLayer.m; path = LasersOfDemocracy/GameLayer.m; sourceTree = "<group>"; };
+		68A50BF215EF1B760003B568 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
+		68A50BF315EF1B760003B568 /* GameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLayer.m; sourceTree = "<group>"; };
 		68A50BF615EF20620003B568 /* Art.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = Art.psd; sourceTree = "<group>"; };
 		68A50BF715EF20620003B568 /* Player-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player-hd.png"; sourceTree = "<group>"; };
 		68A50BF815EF20620003B568 /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player.png; sourceTree = "<group>"; };
@@ -444,9 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				68A50BF515EF20620003B568 /* Art */,
-				68A50BF215EF1B760003B568 /* GameLayer.h */,
-				68A50BF315EF1B760003B568 /* GameLayer.m */,
-				68A50A6C15EEF5630003B568 /* LasersOfDemocracy */,
+				68A50A6C15EEF5630003B568 /* SwipeCocos2DDemo */,
 				68A50A5915EEF5630003B568 /* Frameworks */,
 				68A50A5715EEF5630003B568 /* Products */,
 			);
@@ -476,22 +468,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		68A50A6C15EEF5630003B568 /* LasersOfDemocracy */ = {
+		68A50A6C15EEF5630003B568 /* SwipeCocos2DDemo */ = {
 			isa = PBXGroup;
 			children = (
+				68A50BF215EF1B760003B568 /* GameLayer.h */,
+				68A50BF315EF1B760003B568 /* GameLayer.m */,
 				68A50C0415EF7DCA0003B568 /* MenuLayer.h */,
 				68A50C0515EF7DCB0003B568 /* MenuLayer.m */,
 				68A50BE415EEF5650003B568 /* AppDelegate.h */,
 				68A50BE515EEF5650003B568 /* AppDelegate.m */,
-				68A50BE715EEF5650003B568 /* HelloWorldLayer.h */,
-				68A50BE815EEF5650003B568 /* HelloWorldLayer.m */,
-				68A50BEA15EEF5650003B568 /* IntroLayer.h */,
-				68A50BEB15EEF5650003B568 /* IntroLayer.m */,
 				68A50A6D15EEF5630003B568 /* Resources */,
 				68A50A8715EEF5630003B568 /* libs */,
 				68A50BE015EEF5650003B568 /* Supporting Files */,
 			);
-			path = LasersOfDemocracy;
+			path = SwipeCocos2DDemo;
 			sourceTree = "<group>";
 		};
 		68A50A6D15EEF5630003B568 /* Resources */ = {
@@ -1053,8 +1043,6 @@
 				68A50BDE15EEF5650003B568 /* vec4.c in Sources */,
 				68A50BE315EEF5650003B568 /* main.m in Sources */,
 				68A50BE615EEF5650003B568 /* AppDelegate.m in Sources */,
-				68A50BE915EEF5650003B568 /* HelloWorldLayer.m in Sources */,
-				68A50BEC15EEF5650003B568 /* IntroLayer.m in Sources */,
 				68A50BF415EF1B760003B568 /* GameLayer.m in Sources */,
 				68A50C0615EF7DCD0003B568 /* MenuLayer.m in Sources */,
 			);
@@ -1110,9 +1098,9 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = LasersOfDemocracy/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"LasersOfDemocracy/libs/kazmath/include\"";
-				INFOPLIST_FILE = LasersOfDemocracy/Resources/Info.plist;
+				GCC_PREFIX_HEADER = SwipeCocos2DDemo/Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"SwipeCocos2DDemo/libs/kazmath/include\"";
+				INFOPLIST_FILE = "$(SRCROOT)/SwipeCocos2DDemo/Resources/Info.plist";
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
@@ -1128,9 +1116,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = LasersOfDemocracy/Prefix.pch;
-				HEADER_SEARCH_PATHS = "\"LasersOfDemocracy/libs/kazmath/include\"";
-				INFOPLIST_FILE = LasersOfDemocracy/Resources/Info.plist;
+				GCC_PREFIX_HEADER = SwipeCocos2DDemo/Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"SwipeCocos2DDemo/libs/kazmath/include\"";
+				INFOPLIST_FILE = "$(SRCROOT)/SwipeCocos2DDemo/Resources/Info.plist";
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",

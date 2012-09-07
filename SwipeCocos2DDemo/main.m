@@ -1,9 +1,9 @@
 //
 //  main.m
-//  LasersOfDemocracy
+//  SwipeCocos2DDemo
 //
 //  Created by Jon Manning on 30/08/12.
-//  Copyright __MyCompanyName__ 2012. All rights reserved.
+//  Copyright Secret Lab 2012. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

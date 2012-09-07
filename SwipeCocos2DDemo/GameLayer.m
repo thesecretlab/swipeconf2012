@@ -1,9 +1,9 @@
 //
 //  GameLayer.m
-//  LasersOfDemocracy
+//  SwipeCocos2DDemo
 //
 //  Created by Jon Manning on 30/08/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 Secret Lab. All rights reserved.
 //
 
 #import "GameLayer.h"
