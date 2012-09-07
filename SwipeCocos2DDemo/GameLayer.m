@@ -9,12 +9,14 @@
 #import "GameLayer.h"
 
 @interface GameLayer () {
+    
+    // The player
     CCSprite* player;
     
-    // ##7.2 Add enemies array
+    // The list of all enemies
     NSMutableArray* enemies;
     
-    // ##10 Add label
+    // Score label 
     CCLabelTTF* scoreLabel;
     NSUInteger score;
 }
@@ -23,7 +25,7 @@
 
 @implementation GameLayer
 
-// ##1: Add scene method
+// Returns a CCScene containing this layer.
 +(CCScene *) scene
 {
 	CCScene *scene = [CCScene node];
@@ -32,7 +34,8 @@
 	return scene;
 }
 
-// ##4: Add player sprite
+// Creates and sets up the player, and schedule scoring, collision
+// detection, and enemy creation
 
 - (void)onEnter {
     [super onEnter];
@@ -47,29 +50,24 @@
     
     self.isTouchEnabled = YES;
     
-    // ##7: Schedule enemies
     [self schedule:@selector(addEnemy:) interval:0.5];
     
-    // ##7.3 Set up enemies array
     enemies = [[NSMutableArray array] retain];
     
-    // ##9: Add collision detection
     [self scheduleUpdate];
     
-    // ##10.1 Add score label
     score = 0;
     scoreLabel = [[CCLabelTTF alloc] initWithString:@"Score: 0" fontName:@"Helvetica" fontSize:18];
     scoreLabel.horizontalAlignment = kCCTextAlignmentLeft;
     scoreLabel.anchorPoint = ccp(0,1);
     scoreLabel.position = ccp(10, windowSize.height - 10);
     
-    // ##10.2 Update score
     [self schedule:@selector(updateScore:) interval:1.0];
     [self addChild:scoreLabel];
     
 }
 
-// ##10.3 Update score
+// Update score
 - (void) updateScore:(ccTime)deltaTime {
     if (player != nil) {
         score += 10;
@@ -77,11 +75,10 @@
     }
 }
 
-// ##7.1: Add schedule methods
+// Add an enemy that moves, rotates, and eventually fades out
 - (void) addEnemy:(ccTime)deltaTime {
     NSLog(@"Adding an enemy!");
     
-    // ##8: Create rocks
     int rockNumber = (random() % 2) + 1; // random number between 1 and 2
     NSString* imageName = [NSString stringWithFormat:@"Rock%i.png", rockNumber];
     
@@ -97,23 +94,18 @@
     
     [enemies addObject:rock];
 
-    
-    // ##8.1: Move around
     CGPoint velocity = ccp(random() % 200 - 100, random() % 200 - 100);
     id moveAction = [CCRepeatForever actionWithAction:[CCMoveBy actionWithDuration:1 position:velocity]];
     [rock runAction:moveAction];
     
-    // ##8.2: Fade in
     rock.opacity = 0;
     id fadeInAction = [CCFadeIn actionWithDuration:0.5];
     [rock runAction:fadeInAction];
     
-    // ##8.3: Rotate
     CGFloat angle = (random() % 2000 / 1000.0f - 1.0f) * 180.0;
     id rotationAction = [CCRepeatForever actionWithAction:[CCRotateBy actionWithDuration:5 angle:angle]];
     [rock runAction:rotationAction];
     
-    // ##8.4: Disappear after 5 seconds
     id disappearAction = [CCSequence actionWithArray:@[[CCDelayTime actionWithDuration:5.0], [CCFadeOut actionWithDuration:0.5], [CCCallBlockN actionWithBlock:^(CCNode *node) {
         NSLog(@"Removing rock!");
         [node removeFromParentAndCleanup:YES];
@@ -126,7 +118,7 @@
     
 }
 
-// ##9.1: Update method
+// Check for collisions
 -(void) update:(ccTime)deltaTime {
     
     
@@ -136,7 +128,6 @@
             [player removeFromParentAndCleanup:YES];
             player = nil;
             
-            // ##11.0
             // Wait 2 seconds and return to the previous screen
             double delayInSeconds = 2.0;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
@@ -148,14 +139,11 @@
     }
 }
 
-// ##5: Add touch method
+// When the screen is touched, move the player to that point
 - (void)ccTouchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
     
     UITouch* touch = [touches anyObject];
     NSLog(@"Touch began! %@", NSStringFromCGPoint([touch locationInView:touch.view]));
-    
-    
-    // ##6: Move player sprite on touch
     
     [player stopAllActions];
     

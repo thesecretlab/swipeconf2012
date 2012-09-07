@@ -10,10 +10,10 @@
 
 #import "AppDelegate.h"
 
-// ##2: Import GameLayer.h
+// The game itself.
 #import "GameLayer.h"
 
-// ##3: Import MenuLayer.h
+// The "Spaceships!" menu.
 #import "MenuLayer.h"
 
 @implementation AppController
@@ -79,9 +79,7 @@
 
 	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
     
-    // ##3: Push GameLayer scene
-	//[director_ pushScene: [GameLayer scene]];
-    // ##10.4 Push menu scene
+    // Push the menu scene
     [director_ pushScene: [MenuLayer scene]];
     
 	
