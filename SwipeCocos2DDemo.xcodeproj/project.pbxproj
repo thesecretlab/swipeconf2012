@@ -145,7 +145,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		68A50A5615EEF5630003B568 /* LasersOfDemocracy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LasersOfDemocracy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A50A5615EEF5630003B568 /* SwipeCocos2DDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeCocos2DDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68A50A5A15EEF5630003B568 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		68A50A5C15EEF5630003B568 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		68A50A5E15EEF5630003B568 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -455,7 +455,7 @@
 		68A50A5715EEF5630003B568 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				68A50A5615EEF5630003B568 /* LasersOfDemocracy.app */,
+				68A50A5615EEF5630003B568 /* SwipeCocos2DDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -874,9 +874,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		68A50A5515EEF5630003B568 /* LasersOfDemocracy */ = {
+		68A50A5515EEF5630003B568 /* SwipeCocos2DDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68A50BEF15EEF5650003B568 /* Build configuration list for PBXNativeTarget "LasersOfDemocracy" */;
+			buildConfigurationList = 68A50BEF15EEF5650003B568 /* Build configuration list for PBXNativeTarget "SwipeCocos2DDemo" */;
 			buildPhases = (
 				68A50A5215EEF5630003B568 /* Sources */,
 				68A50A5315EEF5630003B568 /* Frameworks */,
@@ -886,9 +886,9 @@
 			);
 			dependencies = (
 			);
-			name = LasersOfDemocracy;
+			name = SwipeCocos2DDemo;
 			productName = LasersOfDemocracy;
-			productReference = 68A50A5615EEF5630003B568 /* LasersOfDemocracy.app */;
+			productReference = 68A50A5615EEF5630003B568 /* SwipeCocos2DDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -899,7 +899,7 @@
 			attributes = {
 				LastUpgradeCheck = 0440;
 			};
-			buildConfigurationList = 68A50A5015EEF5630003B568 /* Build configuration list for PBXProject "LasersOfDemocracy" */;
+			buildConfigurationList = 68A50A5015EEF5630003B568 /* Build configuration list for PBXProject "SwipeCocos2DDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -911,7 +911,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				68A50A5515EEF5630003B568 /* LasersOfDemocracy */,
+				68A50A5515EEF5630003B568 /* SwipeCocos2DDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -1117,7 +1117,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwipeCocos2DDemo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1135,7 +1135,7 @@
 					"-lz",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwipeCocos2DDemo;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1144,7 +1144,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		68A50A5015EEF5630003B568 /* Build configuration list for PBXProject "LasersOfDemocracy" */ = {
+		68A50A5015EEF5630003B568 /* Build configuration list for PBXProject "SwipeCocos2DDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				68A50BED15EEF5650003B568 /* Debug */,
@@ -1153,13 +1153,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68A50BEF15EEF5650003B568 /* Build configuration list for PBXNativeTarget "LasersOfDemocracy" */ = {
+		68A50BEF15EEF5650003B568 /* Build configuration list for PBXNativeTarget "SwipeCocos2DDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				68A50BF015EEF5650003B568 /* Debug */,
 				68A50BF115EEF5650003B568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
